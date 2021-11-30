@@ -1,6 +1,20 @@
-public struct DSBluetooth {
-    public private(set) var text = "Hello, World!"
 
+import DSBase
+
+public struct DSBluetooth {
+    
+    // TODO: - ..
+    
     public init() {
+        
     }
+    
+}
+
+extension DSBluetooth: DSCompatible { }
+
+public extension DS where DSBase == DSBluetooth {
+    
+    // TODO: - ..
+    
 }

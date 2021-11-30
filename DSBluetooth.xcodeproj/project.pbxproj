@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F12CED992756810600D4E751 /* DSBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CED982756810600D4E751 /* DSBluetooth.swift */; };
 		F1C61CC527567E3700EA6AB6 /* DSBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C61CBD27567E3600EA6AB6 /* DSBluetooth.framework */; };
+		F1D16B2B275688DA006C894D /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D16B29275688CF006C894D /* Tests.swift */; };
+		F1D16B2E27568DE5006C894D /* DSBase in Frameworks */ = {isa = PBXBuildFile; productRef = F1D16B2D27568DE5006C894D /* DSBase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,8 +28,10 @@
 		F12CED9B2756812800D4E751 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F12CED9C2756812800D4E751 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		F12CEDA12756819B00D4E751 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F12CEDCC2756848C00D4E751 /* DSBluetooth.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DSBluetooth.podspec; sourceTree = "<group>"; };
 		F1C61CBD27567E3600EA6AB6 /* DSBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C61CC427567E3700EA6AB6 /* DSBluetoothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSBluetoothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D16B29275688CF006C894D /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D16B2E27568DE5006C894D /* DSBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +76,7 @@
 				F12CEDA12756819B00D4E751 /* LICENSE */,
 				F12CED9C2756812800D4E751 /* Package.swift */,
 				F12CED9B2756812800D4E751 /* README.md */,
+				F12CEDCC2756848C00D4E751 /* DSBluetooth.podspec */,
 			);
 			name = Deployment;
 			sourceTree = "<group>";
@@ -80,6 +86,7 @@
 			children = (
 				F12CED9A2756811800D4E751 /* Deployment */,
 				F10B5AAF275677900008EF06 /* Sources */,
+				F1D16B28275688CF006C894D /* Tests */,
 				F1BEA1AB275675D100AB4C9E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +98,14 @@
 				F1C61CC427567E3700EA6AB6 /* DSBluetoothTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F1D16B28275688CF006C894D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F1D16B29275688CF006C894D /* Tests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +135,9 @@
 			dependencies = (
 			);
 			name = DSBluetooth;
+			packageProductDependencies = (
+				F1D16B2D27568DE5006C894D /* DSBase */,
+			);
 			productName = DSBluetooth;
 			productReference = F1C61CBD27567E3600EA6AB6 /* DSBluetooth.framework */;
 			productType = "com.apple.product-type.framework";
@@ -169,6 +187,9 @@
 				Base,
 			);
 			mainGroup = F1BEA1A1275675D100AB4C9E;
+			packageReferences = (
+				F1D16B2C27568DE5006C894D /* XCRemoteSwiftPackageReference "DSBase" */,
+			);
 			productRefGroup = F1BEA1AB275675D100AB4C9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D16B2B275688DA006C894D /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +496,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1D16B2C27568DE5006C894D /* XCRemoteSwiftPackageReference "DSBase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swp-song/DSBase";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1D16B2D27568DE5006C894D /* DSBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1D16B2C27568DE5006C894D /* XCRemoteSwiftPackageReference "DSBase" */;
+			productName = DSBase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1BEA1A2275675D100AB4C9E /* Project object */;
 }

@@ -7,6 +7,8 @@
 
 import UIKit
 
+import DSBluetooth
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

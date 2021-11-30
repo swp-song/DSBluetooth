@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DSBase",
+        "repositoryURL": "https://github.com/swp-song/DSBase.git",
+        "state": {
+          "branch": null,
+          "revision": "1504c385913ff62668c49998503ba6711198b3a3",
+          "version": "3.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
