@@ -17,7 +17,10 @@ let package = Package(
         .target(
             name: "DSBluetooth",
             dependencies: ["DSBase"],
-            path: "Sources"
+            path: "Sources",
+            linkerSettings:[
+                .linkedFramework("CoreBluetooth", .when(platforms: [.iOS])),
+            ]
         )
     ],
     

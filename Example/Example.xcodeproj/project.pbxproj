@@ -12,8 +12,13 @@
 		F12CEDC72756833F00D4E751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F12CEDBE2756833F00D4E751 /* Assets.xcassets */; };
 		F12CEDC92756833F00D4E751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CEDC12756833F00D4E751 /* AppDelegate.swift */; };
 		F12CEDCA2756833F00D4E751 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CEDC22756833F00D4E751 /* SceneDelegate.swift */; };
-		F12CEDCB2756833F00D4E751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CEDC42756833F00D4E751 /* ViewController.swift */; };
-		F12CEDD82756859800D4E751 /* DSBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12CEDD4275684B200D4E751 /* DSBluetooth.framework */; };
+		F1A2D6E02767912A003F8E6F /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2D6DD2767912A003F8E6F /* BluetoothController.swift */; };
+		F1A2D6E92767929E003F8E6F /* BluetoothCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2D6E72767929E003F8E6F /* BluetoothCell.swift */; };
+		F1A2D6EA2767929E003F8E6F /* BluetoothCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A2D6E82767929E003F8E6F /* BluetoothCell.xib */; };
+		F1A2D6EC276792C3003F8E6F /* BluetoothTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2D6EB276792C3003F8E6F /* BluetoothTableView.swift */; };
+		F1A2D6EE2767A890003F8E6F /* BluetoothModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2D6ED2767A890003F8E6F /* BluetoothModel.swift */; };
+		F1B041972757D31D005957FD /* DSBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12CEDD4275684B200D4E751 /* DSBluetooth.framework */; };
+		F1B041982757D31D005957FD /* DSBluetooth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F12CEDD4275684B200D4E751 /* DSBluetooth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F1B041992757D31D005957FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F1B041982757D31D005957FD /* DSBluetooth.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F12CEDBA2756833F00D4E751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F12CEDBC2756833F00D4E751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,8 +59,12 @@
 		F12CEDBF2756833F00D4E751 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F12CEDC12756833F00D4E751 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F12CEDC22756833F00D4E751 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F12CEDC42756833F00D4E751 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F12CEDCE275684B200D4E751 /* DSBluetooth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DSBluetooth.xcodeproj; path = ../DSBluetooth.xcodeproj; sourceTree = "<group>"; };
+		F1A2D6DD2767912A003F8E6F /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
+		F1A2D6E72767929E003F8E6F /* BluetoothCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCell.swift; sourceTree = "<group>"; };
+		F1A2D6E82767929E003F8E6F /* BluetoothCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BluetoothCell.xib; sourceTree = "<group>"; };
+		F1A2D6EB276792C3003F8E6F /* BluetoothTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothTableView.swift; sourceTree = "<group>"; };
+		F1A2D6ED2767A890003F8E6F /* BluetoothModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothModel.swift; sourceTree = "<group>"; };
 		F1BEA18A275674AB00AB4C9E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -50,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12CEDD82756859800D4E751 /* DSBluetooth.framework in Frameworks */,
+				F1B041972757D31D005957FD /* DSBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +120,9 @@
 		F12CEDC32756833F00D4E751 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				F12CEDC42756833F00D4E751 /* ViewController.swift */,
+				F1A2D6DC2767912A003F8E6F /* Controller */,
+				F1A2D6DF2767912A003F8E6F /* Model */,
+				F1A2D6DE2767912A003F8E6F /* View */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -116,6 +141,32 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1A2D6DC2767912A003F8E6F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2D6DD2767912A003F8E6F /* BluetoothController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1A2D6DE2767912A003F8E6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2D6EB276792C3003F8E6F /* BluetoothTableView.swift */,
+				F1A2D6E72767929E003F8E6F /* BluetoothCell.swift */,
+				F1A2D6E82767929E003F8E6F /* BluetoothCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1A2D6DF2767912A003F8E6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2D6ED2767A890003F8E6F /* BluetoothModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F1BEA181275674AB00AB4C9E = {
@@ -147,6 +198,7 @@
 				F1BEA186275674AB00AB4C9E /* Sources */,
 				F1BEA187275674AB00AB4C9E /* Frameworks */,
 				F1BEA188275674AB00AB4C9E /* Resources */,
+				F1B041992757D31D005957FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A2D6EA2767929E003F8E6F /* BluetoothCell.xib in Resources */,
 				F12CEDC52756833F00D4E751 /* LaunchScreen.storyboard in Resources */,
 				F12CEDC72756833F00D4E751 /* Assets.xcassets in Resources */,
 				F12CEDC62756833F00D4E751 /* Main.storyboard in Resources */,
@@ -231,9 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12CEDCB2756833F00D4E751 /* ViewController.swift in Sources */,
 				F12CEDC92756833F00D4E751 /* AppDelegate.swift in Sources */,
+				F1A2D6E02767912A003F8E6F /* BluetoothController.swift in Sources */,
+				F1A2D6EE2767A890003F8E6F /* BluetoothModel.swift in Sources */,
+				F1A2D6EC276792C3003F8E6F /* BluetoothTableView.swift in Sources */,
 				F12CEDCA2756833F00D4E751 /* SceneDelegate.swift in Sources */,
+				F1A2D6E92767929E003F8E6F /* BluetoothCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
