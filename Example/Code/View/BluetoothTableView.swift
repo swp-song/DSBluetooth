@@ -17,16 +17,24 @@ class BluetoothTableView: UITableView {
     }
     */
 
-    var datas: [Any] = []
+    var datas: [[BluetoothModel]]  {
+        didSet {
+            reloadData()
+        }
+    }
     
     override init(frame: CGRect, style: UITableView.Style) {
+        self.datas = []
         super.init(frame: frame, style: style)
         setupBluetoothTableView()
+        
     }
     
     required init?(coder: NSCoder) {
+        self.datas = []
         super.init(coder: coder)
         setupBluetoothTableView()
+        
     }
     
 }
@@ -34,30 +42,35 @@ class BluetoothTableView: UITableView {
 extension BluetoothTableView {
     
     func setupBluetoothTableView() -> Void {
-        
-        datas.append(1)
-        datas.append(1)
-        datas.append(1)
-        
-        
-//        style = .insetGrouped
         register(BluetoothCell.NIB, forCellReuseIdentifier: BluetoothCell.identifier)
         self.dataSource = self
+        self.delegate   = self
     }
     
 }
 
 extension BluetoothTableView: UITableViewDataSource {
     
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.datas.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return datas.count
+        return datas[section].count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BluetoothCell.identifier, for: indexPath)
+        let cell: BluetoothCell = tableView.dequeueReusableCell(withIdentifier: BluetoothCell.identifier, for: indexPath) as! BluetoothCell
+        cell.model = datas[indexPath.section][indexPath.row]
         return cell
     }
     
-    
+}
+
+extension BluetoothTableView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+         return 80
+    }
 }

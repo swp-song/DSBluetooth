@@ -8,7 +8,18 @@
 import UIKit
 
 class BluetoothCell: UITableViewCell {
-
+    
+    
+    @IBOutlet private  weak var titleLabel: UILabel!
+    @IBOutlet private weak var rssiLabel: UILabel!
+    
+    var model: BluetoothModel  {
+        didSet {
+            titleLabel.text = model.title
+            rssiLabel.text  = "RSSI: " + model.rssi
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,10 +30,13 @@ class BluetoothCell: UITableViewCell {
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        model = BluetoothModel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
     }
     
     required init?(coder: NSCoder) {
+        model = BluetoothModel()
         super.init(coder: coder)
     }
     
@@ -45,4 +59,5 @@ extension BluetoothCell {
         let nib = UINib(nibName: Self.identifier, bundle: Bundle.main)
         return nib
     }
+    
 }

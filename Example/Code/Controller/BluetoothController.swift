@@ -10,21 +10,36 @@ import UIKit
 import DSBluetooth
 
 class BluetoothController: UIViewController {
+    
+    
 
-    let bluetooth = DSBluetooth()
+    var bluetooth = DSBluetooth()
     
     @IBOutlet private weak var bluetoothView: BluetoothTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
-//        view.addSubview(bluetoothView)
-//        bluetoothView.frame = view.frame
-//        bluetoothView.backgroundColor = UIColor.red
-//
+        
+        navigationItem.title = "Bluetooth List"
+        bluetooth.ds.delegate = self
+        bluetooth.ds.scan()
+        
+        bluetooth.ds.bluetoothScanning { [weak self] models, datas in
+            let aModels = BluetoothModel.models(data: datas)
+            self?.bluetoothView.datas = aModels
+        }
+        
+        
     }
 
+}
 
+extension BluetoothController: DSBluetoothDelegate {
+
+    func bluetoothScanning(models: [Bluetooth], datas: [[String : Any]]) {
+        let aModels = BluetoothModel.models(data: datas)
+        bluetoothView.datas = aModels
+    }
 }
 

@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		F10193B32757C9A600B09315 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F10193B22757C9A600B09315 /* CoreBluetooth.framework */; };
 		F12CED992756810600D4E751 /* DSBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12CED982756810600D4E751 /* DSBluetooth.swift */; };
-		F1614FF6276630A2005FF2BC /* DSBluetooth+Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1614FF5276630A2005FF2BC /* DSBluetooth+Bluetooth.swift */; };
+		F1614FF6276630A2005FF2BC /* DSBluetooth+DataStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1614FF5276630A2005FF2BC /* DSBluetooth+DataStatic.swift */; };
+		F1A2D6F0276A4F29003F8E6F /* DSBluetoothDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2D6EF276A4F29003F8E6F /* DSBluetoothDelegate.swift */; };
 		F1C61CC527567E3700EA6AB6 /* DSBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C61CBD27567E3600EA6AB6 /* DSBluetooth.framework */; };
 		F1D16B2B275688DA006C894D /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D16B29275688CF006C894D /* Tests.swift */; };
 		F1D16B2E27568DE5006C894D /* DSBase in Frameworks */ = {isa = PBXBuildFile; productRef = F1D16B2D27568DE5006C894D /* DSBase */; };
@@ -32,7 +33,8 @@
 		F12CED9C2756812800D4E751 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		F12CEDA12756819B00D4E751 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F12CEDCC2756848C00D4E751 /* DSBluetooth.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DSBluetooth.podspec; sourceTree = "<group>"; };
-		F1614FF5276630A2005FF2BC /* DSBluetooth+Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSBluetooth+Bluetooth.swift"; sourceTree = "<group>"; };
+		F1614FF5276630A2005FF2BC /* DSBluetooth+DataStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSBluetooth+DataStatic.swift"; sourceTree = "<group>"; };
+		F1A2D6EF276A4F29003F8E6F /* DSBluetoothDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBluetoothDelegate.swift; sourceTree = "<group>"; };
 		F1C61CBD27567E3600EA6AB6 /* DSBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C61CC427567E3700EA6AB6 /* DSBluetoothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSBluetoothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D16B29275688CF006C894D /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -79,7 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				F12CED982756810600D4E751 /* DSBluetooth.swift */,
-				F1614FF5276630A2005FF2BC /* DSBluetooth+Bluetooth.swift */,
+				F1A2D6EF276A4F29003F8E6F /* DSBluetoothDelegate.swift */,
+				F1614FF5276630A2005FF2BC /* DSBluetooth+DataStatic.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -237,7 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1614FF6276630A2005FF2BC /* DSBluetooth+Bluetooth.swift in Sources */,
+				F1614FF6276630A2005FF2BC /* DSBluetooth+DataStatic.swift in Sources */,
+				F1A2D6F0276A4F29003F8E6F /* DSBluetoothDelegate.swift in Sources */,
 				F12CED992756810600D4E751 /* DSBluetooth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dream.ds.bluetooth.DSBluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -429,6 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dream.ds.bluetooth.DSBluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
